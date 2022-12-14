@@ -43,7 +43,7 @@ class _MyHomePageState extends State<MyHomePage> {
               pinned: true,
               floating: true,
               snap: true,
-              expandedHeight: 300,
+              expandedHeight: 350,
               flexibleSpace: FlexibleSpaceBar(
                 background: Stack(
                   fit: StackFit.expand,
@@ -81,18 +81,21 @@ class _MyHomePageState extends State<MyHomePage> {
                                 ),
                                 "REPEAT"),
                           ],
-                          
                         ),
-                        
                       ),
-                      
                     ),
-                    Positioned(
+                    //Container(
+                      //color: Colors.black,
+                      //width: double.infinity,
+                    
+                    //),
+                    const Positioned(
                       bottom: 10,
+                      // top: 10,
                       left: 200,
                       child: Center(
                         child: CircleAvatar(
-                          radius: 70,
+                          radius: 100,
                           backgroundImage: AssetImage("images/profile.png"),
                         ),
                       ),
