@@ -14,6 +14,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        primaryColor:Colors.white,
       ),
       home: const MyHomePage(title: "SHARON T S"),
     );
@@ -43,7 +44,7 @@ class _MyHomePageState extends State<MyHomePage> {
               pinned: true,
               floating: true,
               snap: true,
-              expandedHeight: 350,
+              expandedHeight: 360,
               flexibleSpace: FlexibleSpaceBar(
                 background: Stack(
                   fit: StackFit.expand,
@@ -80,15 +81,16 @@ class _MyHomePageState extends State<MyHomePage> {
                                   fontSize: size,
                                 ),
                                 "REPEAT"),
+                            Container(
+                              
+                              height: 78,
+                              color: Colors.white,
+                              width: double.infinity,
+                            ),
                           ],
                         ),
                       ),
                     ),
-                    //Container(
-                      //color: Colors.black,
-                      //width: double.infinity,
-                    
-                    //),
                     const Positioned(
                       bottom: 10,
                       // top: 10,
@@ -103,6 +105,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   ],
                 ),
               ),
+              
             ),
           ],
         ),
