@@ -1,3 +1,5 @@
+import 'dart:html';
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -14,7 +16,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
-        primaryColor:Colors.white,
+        primaryColor: Colors.white,
       ),
       home: const MyHomePage(title: "SHARON T S"),
     );
@@ -82,7 +84,6 @@ class _MyHomePageState extends State<MyHomePage> {
                                 ),
                                 "REPEAT"),
                             Container(
-                              
                               height: 78,
                               color: Colors.white,
                               width: double.infinity,
@@ -98,6 +99,8 @@ class _MyHomePageState extends State<MyHomePage> {
                       child: Center(
                         child: CircleAvatar(
                           radius: 100,
+                          //minRadius: 50,
+                          // maxRadius: 100,
                           backgroundImage: AssetImage("images/profile.png"),
                         ),
                       ),
@@ -105,11 +108,48 @@ class _MyHomePageState extends State<MyHomePage> {
                   ],
                 ),
               ),
-              
             ),
+            SliverList(
+            delegate: SliverChildBuilderDelegate(
+             
+              (BuildContext context, int index) {
+                return ;
+              },
+              childCount: 20,
+            ),
+          ),
           ],
         ),
       ),
     );
   }
+}
+class profile extends StatelessWidget {
+  const profile({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return ListView.separated(
+      itemBuilder: ((context, index) {
+        return Card(
+          child: All.,
+        );
+      }), 
+      separatorBuilder: (ctx, index) {
+              return const SizedBox();
+            },
+       itemCount: 5);
+  }
+}
+List<dynamic> All=[
+  info(),
+  //address(),
+
+];
+info(){
+  return Column(
+    children: [
+      Text("Hardworking and passionate job seeker with strong organizational skills eager to secure entry-level\nsoftware engineer position. Ready to help the team achieve company goals. A reliable employee seeking\na Software engineer position. Offering excellent communication and good judgment.")
+    ],
+  );
 }
